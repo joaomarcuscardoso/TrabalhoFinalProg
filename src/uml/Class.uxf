@@ -1,13 +1,21 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>80</y><w>150</w><h>20</h></coordinates><panel_attributes>Vacina
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>120</x><y>38</y><w>160</w><h>220</h></coordinates><panel_attributes>Vacina
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>80</y><w>150</w><h>20</h></coordinates><panel_attributes>Fabrica
+nome: String
+validade: Date
+qtdEstoque: int
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>340</y><w>160</w><h>30</h></coordinates><panel_attributes>Transporte
+getNome(): String
+setNome(Nome: String): bollean
+getValidade(): Date
+setValidade(validade: Date): Bollean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>28</y><w>170</w><h>220</h></coordinates><panel_attributes>Fabrica
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>220</y><w>160</w><h>20</h></coordinates><panel_attributes>Mercado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>278</y><w>160</w><h>190</h></coordinates><panel_attributes>Transporte
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>220</y><w>150</w><h>20</h></coordinates><panel_attributes>Cliente
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>758</y><w>160</w><h>200</h></coordinates><panel_attributes>Mercado
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>340</y><w>160</w><h>30</h></coordinates><panel_attributes>Distribuição
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>508</y><w>170</w><h>230</h></coordinates><panel_attributes>Cliente
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>768</y><w>160</w><h>190</h></coordinates><panel_attributes>Distribuição
 --
 </panel_attributes><additional_attributes></additional_attributes></element></diagram>
