@@ -1,0 +1,13 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>80</y><w>150</w><h>20</h></coordinates><panel_attributes>Vacina
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>80</y><w>150</w><h>20</h></coordinates><panel_attributes>Fabrica
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>340</y><w>160</w><h>30</h></coordinates><panel_attributes>Transporte
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>220</y><w>160</w><h>20</h></coordinates><panel_attributes>Mercado
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>220</y><w>150</w><h>20</h></coordinates><panel_attributes>Cliente
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>340</y><w>160</w><h>30</h></coordinates><panel_attributes>Distribuição
+--
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
