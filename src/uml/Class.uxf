@@ -1,61 +1,96 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>1274</x><y>10</y><w>330</w><h>210</h></coordinates><panel_attributes>Fabrica
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;170&lt;/x&gt;&lt;y&gt;420&lt;/y&gt;&lt;w&gt;80&lt;/w&gt;&lt;h&gt;490&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;&amp;lt;-
+m2=0..*
+Possui &amp;gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;470;20;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;</help_text><element><id>UMLClass</id><coordinates><x>60</x><y>70</y><w>330</w><h>290</h></coordinates><panel_attributes>Fabrica
 --
-nome: String
-endereco: String
-qtdProduzida: int
+- nome: String
+- endereco: String
+- qtdProduzida: int
 --
-Fabrica(nome: String, endereco: String, qtdProduzida: int)
-getNome(): String
-setNome(Nome: String): Bollean
-getEndereco(): String
-setendereco(endereco: String): Bollean
-getQtdProduzida(): int
-setQtdProduzida(qtdProduzida: int): Bollean
-toString(): String
++ Fabrica(nome: String, endereco: String, qtdProduzida: int)
++ getNome(): String
+setNome(Nome: String): boolean
++ getEndereco(): String
++ setEndereco(endereco: String): boolean
++ getQtdProduzida(): int
++ setQtdProduzida(qtdProduzida: int): boolean
++ removeVacina(codigo: String): boolean
++ toString(): String
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>94</x><y>10</y><w>370</w><h>280</h></coordinates><panel_attributes>Transporte
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1680</x><y>340</y><w>460</w><h>330</h></coordinates><panel_attributes>Transporte
 --
-nome: String
-capacidade: int
-kmPorLitro: double
-destino: String
+- cidadeDestino: String
+- qtdLoteTransportada: int[]
 --
-Transporte(nome: String, capacidade: int, kmPorLitro: double, destino: String)
-getNome(): String
-setNome(Nome: String): Bollean
-getCapacidade(): int
-setCapacidade(capacidade: int): Bollean
-getKmPorLitro(): Double
-setKmPorLitro(kmPorLitro: double): Bollean
-calcPrec(): double
-getDestino(): String
-setDestino(destino: String): Bollean
-toString(): String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>680</y><w>160</w><h>200</h></coordinates><panel_attributes>Mercado
++ Transporte(cidadeDestino: String)
++ getCidadeDestinoo(): String
++ removeVacina(nome: String): void
++ calcularQuantidade(): int[]
++ toString(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>0</y><w>320</w><h>280</h></coordinates><panel_attributes>Vacina
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>114</x><y>670</y><w>170</w><h>230</h></coordinates><panel_attributes>Cliente
+- nome: String
+- validade: Date
+- qtdLote: int
+- codigo: String
+- preco: double
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>674</x><y>670</y><w>160</w><h>230</h></coordinates><panel_attributes>Distribuição
---
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>664</x><y>10</y><w>320</w><h>210</h></coordinates><panel_attributes>Vacina
---
-nome: String
-validade: Date
-qtdEstoque: int
---
-Vacina(nome: String, validade: Date, qtdEstoque: int)
-getNome(): String
-setNome(Nome: String): Bollean
-getValidade(): Date
-setValidade(validade: Date): Bollean
-getQtdEstoque(): int
-setQtdEstoque(qtdEstoque: int): Bollean
-toString(): String
++ Vacina(nome: String, validade: Date, qtdLote: int)
++ getNome(): String
++ getValidade(): Date
++ getQtdLote(): int
++ getCodigo(): int
++ getPreco(): double
++ calcularPreco(): double
++ toString(): String
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>974</x><y>52</y><w>320</w><h>50</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>130</y><w>810</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=0..n
-&lt; possui</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>Relation</id><coordinates><x>454</x><y>52</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=-
+ possui &gt;</panel_attributes><additional_attributes>790;20;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>890</y><w>290</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..*
+Possui &gt;</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>770</y><w>350</w><h>360</h></coordinates><panel_attributes>Cliente
+--
+- pais: String
+- dinheiro: double
+--
++ Cliente(pais: String, dinheiro: double)
++ getPais(): String
++ getDinheiro(): double
++ utilizarDinheiro(qtdUsada: double): double
++ receberDinheiro(qtdRecebida: double): double
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>950</x><y>900</y><w>320</w><h>50</h></coordinates><panel_attributes>lt=-
+m2=1..*
+Possui &gt;</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1250</x><y>760</y><w>400</w><h>360</h></coordinates><panel_attributes>Distribuicao
+--
+- cidade: String
+- estado: String
+- pessoasVacinadas: int
+--
++ Distribuicao(cidade: String, estado: String )
++ getPessoasVacinadas(): int
++ getCidade(): String
++ getEstado(): String
++ removerLote(codigo: string): void
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1370</x><y>270</y><w>80</w><h>510</h></coordinates><panel_attributes>lt=-
 m1=0..n
-possui &gt;</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element></diagram>
+&lt; possui</panel_attributes><additional_attributes>10;10;10;490</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>350</y><w>80</w><h>430</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*
+Possui &gt;</panel_attributes><additional_attributes>10;410;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1570</x><y>640</y><w>150</w><h>140</h></coordinates><panel_attributes>lt=-
+m2=1..*
+Transporta &gt;</panel_attributes><additional_attributes>110;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>760</y><w>360</w><h>290</h></coordinates><panel_attributes>Mercado
+--
+- nome: String
+- qtdVendida: int
+--
++ Mercado(nome: String, codigo: int, preco: double, qtdVendida: int)
++ getNome(): String
++ getQtdVendida(): int
++ imprimirVacina(): String
++ imprimirVacina(preco: double): String
++ venderVacina(codigo: String): void
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1480</x><y>200</y><w>260</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=0..n
+possui &gt;</panel_attributes><additional_attributes>10;10;240;140</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>200</y><w>870</w><h>580</h></coordinates><panel_attributes>lt=-
+m1=0..n
+ possui &gt;</panel_attributes><additional_attributes>850;10;10;560</additional_attributes></element></diagram>
