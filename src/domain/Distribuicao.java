@@ -1,16 +1,18 @@
 package domain;
 
+
 import java.util.ArrayList;
 
 public class Distribuicao {
     private String cidade;
     private String estado;
     private int pessoasVacinadas;
-    private ArrayList<Vacina> vacina = new ArrayList<Vacina>();
+    private ArrayList<Vacina> vacina;
 
     public Distribuicao(String cidade, String estado) {
         this.cidade = cidade;
         this.estado = estado;
+        this.vacina = new ArrayList<Vacina>();
     }
 
     public int getPessoasVacinadas() {

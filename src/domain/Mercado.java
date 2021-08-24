@@ -1,15 +1,17 @@
 package domain;
 
+import domain.Vacina;
 import java.util.ArrayList;
 
 public class Mercado {
     private String nome;
     private int qtdVendida;
-    private ArrayList<Vacina> vacina = new ArrayList<Vacina>();
+    private ArrayList<Vacina> vacina;
 
     public Mercado(String nome, int qtdVendida) {
         this.nome = nome;
         this.qtdVendida = qtdVendida;
+        this.vacina  = new ArrayList<Vacina>();
     }
 
     public String getNome() {

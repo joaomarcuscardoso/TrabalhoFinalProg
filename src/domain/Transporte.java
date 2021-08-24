@@ -5,10 +5,11 @@ import java.util.ArrayList;
 public class Transporte {
     private String cidadeDestino;
     private int qtdLoteTransportada[];
-    private ArrayList<Vacina> vacina = new ArrayList<Vacina>();
+    private ArrayList<Vacina> vacina;
 
     public Transporte(String cidadeDestino) {
         this.cidadeDestino = cidadeDestino;
+        this.vacina  = new ArrayList<Vacina>();
     }
 
     public String getCidadeDestino() {

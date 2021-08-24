@@ -7,12 +7,13 @@ public class Fabrica {
     private String endereco;
     private int qtdProduzida;
 
-    private ArrayList<Vacina> vacina = new ArrayList<Vacina>();
+    private ArrayList<Vacina> vacina;
 
     public Fabrica(String nome, String endereco, int qtdProduzida) {
         this.nome = nome;
         this.endereco = endereco;
         this.qtdProduzida = qtdProduzida;
+        this.vacina = new ArrayList<Vacina>();
     }
 
     public String getNome() {
