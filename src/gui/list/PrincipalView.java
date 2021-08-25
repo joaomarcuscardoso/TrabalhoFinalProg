@@ -56,6 +56,7 @@ public class PrincipalView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         mbMercado = new javax.swing.JMenuBar();
         mnCadastro = new javax.swing.JMenu();
         miCadastroMercado = new javax.swing.JMenuItem();
@@ -65,11 +66,12 @@ public class PrincipalView extends javax.swing.JFrame {
         miCadastroFabrica = new javax.swing.JMenuItem();
         miCadastroDistribuicao = new javax.swing.JMenuItem();
         mnMercado = new javax.swing.JMenu();
-        mnDistribuicao = new javax.swing.JMenu();
-        mnCLiente = new javax.swing.JMenu();
-        mnVacina = new javax.swing.JMenu();
-        mnFabrica = new javax.swing.JMenu();
-        mnTransporte = new javax.swing.JMenu();
+        miMercado = new javax.swing.JCheckBoxMenuItem();
+        miDistribuicao = new javax.swing.JCheckBoxMenuItem();
+        miCliente = new javax.swing.JCheckBoxMenuItem();
+        miVacina = new javax.swing.JCheckBoxMenuItem();
+        miFabrica = new javax.swing.JCheckBoxMenuItem();
+        miTransporte = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Inicial");
@@ -127,29 +129,64 @@ public class PrincipalView extends javax.swing.JFrame {
 
         mbMercado.add(mnCadastro);
 
-        mnMercado.setText("Mercado");
+        mnMercado.setText("Relatório de Classes");
         mnMercado.setMargin(new java.awt.Insets(0, 2, 0, 5));
+
+        miMercado.setSelected(true);
+        miMercado.setText("Mercado");
+        miMercado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miMercadoActionPerformed(evt);
+            }
+        });
+        mnMercado.add(miMercado);
+
+        miDistribuicao.setSelected(true);
+        miDistribuicao.setText("Distribuição");
+        miDistribuicao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miDistribuicaoActionPerformed(evt);
+            }
+        });
+        mnMercado.add(miDistribuicao);
+
+        miCliente.setSelected(true);
+        miCliente.setText("Cliente");
+        miCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miClienteActionPerformed(evt);
+            }
+        });
+        mnMercado.add(miCliente);
+
+        miVacina.setSelected(true);
+        miVacina.setText("Vacina");
+        miVacina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miVacinaActionPerformed(evt);
+            }
+        });
+        mnMercado.add(miVacina);
+
+        miFabrica.setSelected(true);
+        miFabrica.setText("Fabrica");
+        miFabrica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miFabricaActionPerformed(evt);
+            }
+        });
+        mnMercado.add(miFabrica);
+
+        miTransporte.setSelected(true);
+        miTransporte.setText("Transporte");
+        miTransporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miTransporteActionPerformed(evt);
+            }
+        });
+        mnMercado.add(miTransporte);
+
         mbMercado.add(mnMercado);
-
-        mnDistribuicao.setText("Distribuição");
-        mnDistribuicao.setMargin(new java.awt.Insets(0, 2, 0, 5));
-        mbMercado.add(mnDistribuicao);
-
-        mnCLiente.setText("Cliente");
-        mnCLiente.setMargin(new java.awt.Insets(0, 2, 0, 5));
-        mbMercado.add(mnCLiente);
-
-        mnVacina.setText("Vacina");
-        mnVacina.setMargin(new java.awt.Insets(0, 2, 0, 5));
-        mbMercado.add(mnVacina);
-
-        mnFabrica.setText("Fabrica");
-        mnFabrica.setMargin(new java.awt.Insets(0, 2, 0, 5));
-        mbMercado.add(mnFabrica);
-
-        mnTransporte.setText("Transporte");
-        mnTransporte.setMargin(new java.awt.Insets(0, 2, 0, 5));
-        mbMercado.add(mnTransporte);
 
         setJMenuBar(mbMercado);
 
@@ -196,6 +233,36 @@ public class PrincipalView extends javax.swing.JFrame {
         CadastroDistribuicaoView cadDistribuicaoView = new CadastroDistribuicaoView();
         cadDistribuicaoView.setVisible(true);   
     }//GEN-LAST:event_miCadastroDistribuicaoActionPerformed
+
+    private void miMercadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miMercadoActionPerformed
+        MercadoView listMercadoView = new MercadoView();
+        listMercadoView.setVisible(true);
+    }//GEN-LAST:event_miMercadoActionPerformed
+
+    private void miDistribuicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miDistribuicaoActionPerformed
+        DistribuicaoView listDistribuicaoView = new DistribuicaoView();
+        listDistribuicaoView.setVisible(true);
+    }//GEN-LAST:event_miDistribuicaoActionPerformed
+
+    private void miClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miClienteActionPerformed
+        ClienteView listClienteView = new ClienteView();
+        listClienteView.setVisible(true);
+    }//GEN-LAST:event_miClienteActionPerformed
+
+    private void miVacinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miVacinaActionPerformed
+        VacinaView listVacinaView = new VacinaView();
+        listVacinaView.setVisible(true);
+    }//GEN-LAST:event_miVacinaActionPerformed
+
+    private void miFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miFabricaActionPerformed
+        FabricaView listFabricaView = new FabricaView();
+        listFabricaView.setVisible(true);
+    }//GEN-LAST:event_miFabricaActionPerformed
+
+    private void miTransporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miTransporteActionPerformed
+        TransporteView listTransporteView = new TransporteView();
+        listTransporteView.setVisible(true);
+    }//GEN-LAST:event_miTransporteActionPerformed
                                                    
 
     /**
@@ -234,6 +301,7 @@ public class PrincipalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JMenuBar mbMercado;
     private javax.swing.JMenuItem miCadastroCliente;
     private javax.swing.JMenuItem miCadastroDistribuicao;
@@ -241,12 +309,13 @@ public class PrincipalView extends javax.swing.JFrame {
     private javax.swing.JMenuItem miCadastroMercado;
     private javax.swing.JMenuItem miCadastroTransporte;
     private javax.swing.JMenuItem miCadastroVacina;
-    private javax.swing.JMenu mnCLiente;
+    private javax.swing.JCheckBoxMenuItem miCliente;
+    private javax.swing.JCheckBoxMenuItem miDistribuicao;
+    private javax.swing.JCheckBoxMenuItem miFabrica;
+    private javax.swing.JCheckBoxMenuItem miMercado;
+    private javax.swing.JCheckBoxMenuItem miTransporte;
+    private javax.swing.JCheckBoxMenuItem miVacina;
     private javax.swing.JMenu mnCadastro;
-    private javax.swing.JMenu mnDistribuicao;
-    private javax.swing.JMenu mnFabrica;
     private javax.swing.JMenu mnMercado;
-    private javax.swing.JMenu mnTransporte;
-    private javax.swing.JMenu mnVacina;
     // End of variables declaration//GEN-END:variables
 }
