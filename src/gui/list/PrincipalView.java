@@ -11,6 +11,12 @@ import domain.Fabrica;
 import domain.Mercado;
 import domain.Transporte;
 import domain.Vacina;
+import gui.register.CadastroClienteView;
+import gui.register.CadastroDistribuicaoView;
+import gui.register.CadastroFabricaView;
+import gui.register.CadastroMercadoView;
+import gui.register.CadastroTransporteView;
+import gui.register.CadastroVacinaView;
 import java.util.ArrayList;
 
 /**
@@ -88,15 +94,35 @@ public class PrincipalView extends javax.swing.JFrame {
         mnCadastro.add(miCadastroTransporte);
 
         miCadastroCliente.setText("Cliente");
+        miCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroClienteActionPerformed(evt);
+            }
+        });
         mnCadastro.add(miCadastroCliente);
 
         miCadastroVacina.setText("Vacina");
+        miCadastroVacina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroVacinaActionPerformed(evt);
+            }
+        });
         mnCadastro.add(miCadastroVacina);
 
         miCadastroFabrica.setText("Fabrica");
+        miCadastroFabrica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroFabricaActionPerformed(evt);
+            }
+        });
         mnCadastro.add(miCadastroFabrica);
 
         miCadastroDistribuicao.setText("Distribuição");
+        miCadastroDistribuicao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroDistribuicaoActionPerformed(evt);
+            }
+        });
         mnCadastro.add(miCadastroDistribuicao);
 
         mbMercado.add(mnCadastro);
@@ -142,12 +168,35 @@ public class PrincipalView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void miCadastroMercadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroMercadoActionPerformed
-        // TODO add your handling code here:
+        CadastroMercadoView cadMercadoView = new CadastroMercadoView();
+        cadMercadoView.setVisible(true);
     }//GEN-LAST:event_miCadastroMercadoActionPerformed
 
     private void miCadastroTransporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroTransporteActionPerformed
-        // TODO add your handling code here:
+        CadastroTransporteView cadTransporteView = new CadastroTransporteView();
+        cadTransporteView.setVisible(true);
     }//GEN-LAST:event_miCadastroTransporteActionPerformed
+
+    private void miCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroClienteActionPerformed
+        CadastroClienteView cadClienteView = new CadastroClienteView();
+        cadClienteView.setVisible(true);
+    }//GEN-LAST:event_miCadastroClienteActionPerformed
+
+    private void miCadastroFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroFabricaActionPerformed
+        CadastroFabricaView cadFabricaView = new CadastroFabricaView();
+        cadFabricaView.setVisible(true);
+    }//GEN-LAST:event_miCadastroFabricaActionPerformed
+
+    private void miCadastroVacinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroVacinaActionPerformed
+        CadastroVacinaView cadVacinaView = new CadastroVacinaView();
+        cadVacinaView.setVisible(true);
+    }//GEN-LAST:event_miCadastroVacinaActionPerformed
+
+    private void miCadastroDistribuicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroDistribuicaoActionPerformed
+        CadastroDistribuicaoView cadDistribuicaoView = new CadastroDistribuicaoView();
+        cadDistribuicaoView.setVisible(true);   
+    }//GEN-LAST:event_miCadastroDistribuicaoActionPerformed
+                                                   
 
     /**
      * @param args the command line arguments

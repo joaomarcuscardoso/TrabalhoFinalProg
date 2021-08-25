@@ -34,6 +34,8 @@ public class CadastroTransporteView extends javax.swing.JFrame {
         label1 = new java.awt.Label();
         tfCidadeDestino = new java.awt.TextField();
         btSalvar = new javax.swing.JButton();
+        label2 = new java.awt.Label();
+        cbVeiculo = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Transporte");
@@ -53,6 +55,14 @@ public class CadastroTransporteView extends javax.swing.JFrame {
             }
         });
 
+        label2.setText("Veiculo: ");
+
+        cbVeiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbVeiculoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,7 +74,12 @@ public class CadastroTransporteView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(tfCidadeDestino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(tfCidadeDestino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -75,8 +90,12 @@ public class CadastroTransporteView extends javax.swing.JFrame {
                     .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfCidadeDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(btSalvar)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -89,6 +108,10 @@ public class CadastroTransporteView extends javax.swing.JFrame {
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btSalvarActionPerformed
+
+    private void cbVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbVeiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbVeiculoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +143,7 @@ public class CadastroTransporteView extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new CadastroTransporteView().setVisible(true);
             }
@@ -128,7 +152,9 @@ public class CadastroTransporteView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btSalvar;
+    private javax.swing.JComboBox<Veiculo> cbVeiculo;
     private java.awt.Label label1;
+    private java.awt.Label label2;
     private java.awt.TextField tfCidadeDestino;
     // End of variables declaration//GEN-END:variables
 }

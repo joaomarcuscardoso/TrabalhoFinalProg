@@ -6,10 +6,13 @@ public class Transporte {
     private String cidadeDestino;
     private int qtdLoteTransportada;
     private ArrayList<Vacina> vacina;
+    private ArrayList<Veiculo> veiculo;
 
     public Transporte(String cidadeDestino) {
         this.cidadeDestino = cidadeDestino;
         this.vacina  = new ArrayList<Vacina>();
+        this.veiculo  = new ArrayList<Veiculo>();
+        
     }
 
     public String getCidadeDestino() {
@@ -43,6 +46,10 @@ public class Transporte {
         } else {
             return false;
         }
+    }
+    
+        public void addTransporte(Veiculo veic) {
+        this.veiculo.add(veic);
     }
 
 }

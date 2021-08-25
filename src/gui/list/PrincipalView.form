@@ -32,21 +32,33 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadastroClienteActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="miCadastroVacina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Vacina"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadastroVacinaActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="miCadastroFabrica">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fabrica"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadastroFabricaActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="miCadastroDistribuicao">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Distribui&#xe7;&#xe3;o"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadastroDistribuicaoActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
