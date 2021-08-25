@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Transporte {
     private String cidadeDestino;
-    private int qtdLoteTransportada[];
+    private int qtdLoteTransportada;
     private ArrayList<Vacina> vacina;
 
     public Transporte(String cidadeDestino) {
@@ -16,7 +16,7 @@ public class Transporte {
         return this.cidadeDestino;
     }
 
-    public int[] getQtdLoteTransportada() {
+    public int getQtdLoteTransportada() {
         return this.qtdLoteTransportada;
     }
 
@@ -35,13 +35,14 @@ public class Transporte {
         return false;
 
     }
-
-    private int[] calcularQuantidade() {
-        for (int i = 0; i < this.vacina.size(); i++) {
-            this.qtdLoteTransportada[i] = this.vacina.get(i).getQtdLote();
+    
+    public boolean setQtdLoteTransportada(int qtd) {
+        if(qtd > 0) {
+            this.qtdLoteTransportada = qtd;
+            return true;
+        } else {
+            return false;
         }
-
-        return this.qtdLoteTransportada;
     }
 
 }

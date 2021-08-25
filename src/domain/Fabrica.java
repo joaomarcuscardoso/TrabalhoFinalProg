@@ -8,12 +8,14 @@ public class Fabrica {
     private int qtdProduzida;
 
     private ArrayList<Vacina> vacina;
+    private ArrayList<Fabrica> fabrica;
 
     public Fabrica(String nome, String endereco, int qtdProduzida) {
         this.nome = nome;
         this.endereco = endereco;
         this.qtdProduzida = qtdProduzida;
         this.vacina = new ArrayList<Vacina>();
+        this.fabrica = new ArrayList<Fabrica>();
     }
 
     public String getNome() {
@@ -64,6 +66,10 @@ public class Fabrica {
 
         return false;
 
+    }
+    
+    public void addFabrica(Fabrica fab) {
+        this.fabrica.add(fab);
     }
 
     public String toString() {

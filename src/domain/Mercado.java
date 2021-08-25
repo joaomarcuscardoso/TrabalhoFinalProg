@@ -7,11 +7,13 @@ public class Mercado {
     private String nome;
     private int qtdVendida;
     private ArrayList<Vacina> vacina;
+    private ArrayList<Cliente> cliente;
 
     public Mercado(String nome, int qtdVendida) {
         this.nome = nome;
         this.qtdVendida = qtdVendida;
         this.vacina  = new ArrayList<Vacina>();
+        this.cliente  = new ArrayList<Cliente>();
     }
 
     public String getNome() {
@@ -62,6 +64,10 @@ public class Mercado {
 
         return false;
 
+    }
+    
+    public void addCliente(Cliente cliente) {
+        this.cliente.add(cliente);
     }
 
     public String toString() {

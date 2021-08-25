@@ -1,39 +1,25 @@
 package domain;
 
+import java.util.ArrayList;
+
 public class Cliente {
     private String pais;
-    private double dinheiro;
+    private ArrayList<Distribuicao> distribuicao;
 
-    public Cliente(String pais, double dinheiro) {
+    public Cliente(String pais) {
         this.pais = pais;
-        this.dinheiro = dinheiro;
+        this.distribuicao = new ArrayList<Distribuicao>();
+    }
+    
+    public void addDistribuicao(Distribuicao dist) {
+        this.distribuicao.add(dist);
     }
 
     public String getPais() {
         return this.pais;
     }
 
-    public double getDinheiro() {
-        return this.dinheiro;
-    }
-
-    public double utilizarDinheiro(double qtdUsada) {
-        if (this.dinheiro >= qtdUsada) {
-            this.dinheiro -= qtdUsada;
-        }
-
-        return this.dinheiro;
-    }
-
-    public double receberDinheiro(double qtdRecebida) {
-        if (this.dinheiro <= qtdRecebida) {
-            this.dinheiro += qtdRecebida;
-        }
-
-        return this.dinheiro;
-    }
-
     public String toString() {
-        return "Pais: " + this.pais + ", dinheiro: R$ " + this.dinheiro;
+        return "Pais: " + this.pais;
     }
 }
