@@ -1,6 +1,5 @@
 package domain;
 
-import domain.Vacina;
 import java.util.ArrayList;
 
 public class Mercado {

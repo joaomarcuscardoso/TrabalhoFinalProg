@@ -7,6 +7,7 @@ public class Transporte {
     private int qtdLoteTransportada;
     private ArrayList<Vacina> vacina;
     private ArrayList<Veiculo> veiculo;
+    
 
     public Transporte(String cidadeDestino) {
         this.cidadeDestino = cidadeDestino;
@@ -48,7 +49,7 @@ public class Transporte {
         }
     }
     
-        public void addTransporte(Veiculo veic) {
+    public void addVeiculo(Veiculo veic) {
         this.veiculo.add(veic);
     }
 

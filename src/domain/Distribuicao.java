@@ -6,16 +6,17 @@ import java.util.ArrayList;
 public class Distribuicao {
     private String cidade;
     private String estado;
-    private int pessoasVacinadas;
+    private Integer pessoasVacinadas;
     private ArrayList<Vacina> vacina;
 
-    public Distribuicao(String cidade, String estado) {
+    public Distribuicao(String cidade, String estado, Integer pessoasVacinadas) {
         this.cidade = cidade;
         this.estado = estado;
+        this.pessoasVacinadas = pessoasVacinadas;
         this.vacina = new ArrayList<Vacina>();
     }
 
-    public int getPessoasVacinadas() {
+    public Integer getPessoasVacinadas() {
         return this.pessoasVacinadas;
     }
 
@@ -30,11 +31,16 @@ public class Distribuicao {
     public void addVacina(Vacina vac) {
         this.vacina.add(vac);
     }
+    
+    public void addPessoasVacinadas(int pessoasVacinada) {
+        if(pessoasVacinada > 0) {
+            this.pessoasVacinadas += pessoasVacinada;
+        }
+    }
 
     public boolean removerLote(String codigo) {
         for (int i = 0; i < this.vacina.size(); i++) {
             if (codigo.equalsIgnoreCase(vacina.get(i).getCodigo())) {
-                this.pessoasVacinadas += this.vacina.get(i).getQtdLote();
                 this.vacina.remove(this.vacina.get(i));
                 return true;
             }

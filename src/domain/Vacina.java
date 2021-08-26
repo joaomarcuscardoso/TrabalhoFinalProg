@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Vacina {
     private String nome;
-    private Date validade;
+    private String validade;
     private int qtdLote;
     private double preco;
     private String codigo;
 
-    public Vacina(String nome, Date validade, int qtdLote) {
+    public Vacina(String nome, String validade, int qtdLote) {
         this.nome = nome;
         this.validade = validade;
         this.qtdLote = qtdLote;
@@ -27,7 +27,7 @@ public class Vacina {
         this.codigo = codigo + "VAC";
     }
 
-    public Date getValidade() {
+    public String getValidade() {
         return this.validade;
     }
 
