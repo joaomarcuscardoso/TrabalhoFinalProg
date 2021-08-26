@@ -23,7 +23,7 @@ public class Vacina {
         return this.codigo;
     }
 
-    public void setCodigo() {
+    public void setCodigo(String codigo) {
         this.codigo = codigo + "VAC";
     }
 

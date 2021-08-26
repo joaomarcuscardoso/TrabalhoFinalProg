@@ -52,5 +52,10 @@ public class Transporte {
     public void addVeiculo(Veiculo veic) {
         this.veiculo.add(veic);
     }
+    
+    
+    public String toString() {
+        return "cidade de Destino: "+ this.cidadeDestino;
+    }
 
 }
